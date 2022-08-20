@@ -5,12 +5,86 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Money Master</title>
+    <title>Money Monster</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://kit.fontawesome.com/3894a6573f.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <h1>Stay Away from money monster</h1>
-    <script src="js/app.js></script>
+<body class="">
+    <header class="w-3/4 mx-auto flex flex-row justify-center gap-2 text-4xl font-semibold py-8">
+        <h2 class="text-green-400">Money Monster</h2>
+        <p class="text-orange-400"><i class="fa-solid fa-sack-dollar"></i></p>
+    </header>
+    <main class="w-3/4 mx-auto flex font-mono text-xl">
+        <section class="w-1/2">
+            <div class="p-4">
+                <img src="img/left-banner-img.png" alt="">
+            </div>
+        </section>
+        <section class="w-1/2 flex flex-col gap-4 pt-12">
+            <div>
+                <table class="py-4">
+                    <tbody>
+                        <tr>
+                            <th colspan="2" class="font-bold text-center">Income</th>
+                        </tr>
+                        <tr class="grid grid-cols-2 gap-4 place-content-stretch">
+                            <td class="text-right">Income</td>
+                            <td><input class="bg-gray-200 text-center py-1" type="text" name="" id="income-field"></td>
+                        </tr>
+                        <tr>
+                            <th colspan="2" class="font-bold text-center">Expense</th>
+                        </tr>
+                        <tr class="grid grid-cols-2 gap-4 place-content-stretch">
+                            <td class="text-right">Food:</td>
+                            <td><input class="bg-gray-200 text-center py-1" type="text" name="" id="expense-food"></td>
+                        </tr>
+                        <tr class="grid grid-cols-2 gap-4 place-content-stretch">
+                            <td class="text-right">Rent:</td>
+                            <td><input class="bg-gray-200 text-center py-1" type="text" name="" id="expense-rent"></td>
+                        </tr>
+                        <tr class="grid grid-cols-2 gap-4 place-content-stretch">
+                            <td class="text-right">Cloth:</td>
+                            <td><input class="bg-gray-200 text-center py-1" type="text" name="" id="expense-cloth"></td>
+                        </tr>
+                        <tr>
+                            <th colspan="2" class="flex justify-center">
+                                <button id="btn-calculate" class="bg-blue-300 py-2 px-4 rounded">Calculate</button>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th colspan="2" class="font-bold text-center">Total Expense: <span
+                                    id="total-expense"></span> </th>
+                        </tr>
+                        <tr>
+                            <th colspan="2" class="font-bold text-center">Balance: <span id="remaining-balance"></span>
+                            </th>
+                        </tr>
+                        <tr class="flex flex-row justify-center text-center">
+                            <td>Save:</td>
+                            <td><input class="bg-gray-200 text-center py-1 w-26" type="text" name=""
+                                    id="amount-to-save"></td>
+                            <td class="mx-4">%</td>
+                            <td>
+                                <button id="btn-save" class="bg-blue-300 px-2 py-1 mx-2 rounded w-1/8">Save</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="2" class="font-bold text-center">Saving Amount: <span
+                                    id="print-save-amount"></span> </th>
+                        </tr>
+                        <tr>
+                            <th colspan="2" class="font-bold text-center">Remaining Balance: <span
+                                    id="remaining-Amount"></span></th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="js/utility.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
